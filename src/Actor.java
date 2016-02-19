@@ -9,7 +9,7 @@ public class Actor {
     private boolean roleStatus;
     private int shotBonus;
 
-    public Actor{
+    public Actor(){
         this.wallet = wallet;
         this.rank = rank;
         this.playerID = playerID;
@@ -19,7 +19,7 @@ public class Actor {
     }
 
     public int act(){
-        int rolledDie = rollDice();
+        int rolledDie = Dice.rollDice(shotBonus);
         return rolledDie;
     }
 
